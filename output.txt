@@ -1,0 +1,134 @@
+Please input entry (entry>0) :
+4
+
+0x000 li R3,0
+000 SN SN SN SN SN SN SN SN entry: 0 misprediction: 0
+N N not miss
+
+0x004 li R4,10
+000 SN SN SN SN SN SN SN SN entry: 1 misprediction: 0
+N N not miss
+
+0x008 beq R4,R3,End
+000 SN SN SN SN SN SN SN SN entry: 2 misprediction: 0
+N N not miss
+
+0x00C addi R3,R3,1
+000 SN SN SN SN SN SN SN SN entry: 3 misprediction: 0
+N N not miss
+
+0x010 beq R0,R0,Loop
+000 SN SN SN SN SN SN SN SN entry: 0 misprediction: 1
+N T miss
+
+0x008 beq R4,R3,End
+000 SN SN SN SN SN SN SN SN entry: 1 misprediction: 0
+N N not miss
+
+0x00C addi R3,R3,1
+000 SN SN SN SN SN SN SN SN entry: 2 misprediction: 0
+N N not miss
+
+0x010 beq R0,R0,Loop
+000 SN SN SN SN SN SN SN SN entry: 3 misprediction: 1
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN SN SN SN SN entry: 0 misprediction: 1
+N N not miss
+
+0x00C addi R3,R3,1
+000 SN SN SN SN SN SN SN SN entry: 1 misprediction: 0
+N N not miss
+
+0x010 beq R0,R0,Loop
+000 SN SN SN SN SN SN SN SN entry: 2 misprediction: 1
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN SN SN SN SN entry: 3 misprediction: 1
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN SN SN SN SN entry: 0 misprediction: 1
+N N not miss
+
+0x010 beq R0,R0,Loop
+000 SN SN SN SN SN SN SN SN entry: 1 misprediction: 1
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN SN SN SN SN entry: 2 misprediction: 1
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN SN SN SN SN entry: 3 misprediction: 1
+N N not miss
+
+0x010 beq R0,R0,Loop
+100 WN SN SN SN SN SN SN SN entry: 0 misprediction: 2
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN SN SN SN SN entry: 1 misprediction: 1
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN SN SN SN SN entry: 2 misprediction: 1
+N N not miss
+
+0x010 beq R0,R0,Loop
+100 WN SN SN SN SN SN SN SN entry: 3 misprediction: 2
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN WN SN SN SN entry: 0 misprediction: 2
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN SN SN SN SN entry: 1 misprediction: 1
+N N not miss
+
+0x010 beq R0,R0,Loop
+100 WN SN SN SN SN SN SN SN entry: 2 misprediction: 2
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN WN SN SN SN entry: 3 misprediction: 2
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN WN SN SN SN entry: 0 misprediction: 2
+N N not miss
+
+0x010 beq R0,R0,Loop
+100 WN SN SN SN SN SN SN SN entry: 1 misprediction: 2
+N T miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN WN SN SN SN entry: 2 misprediction: 2
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN WN SN SN SN entry: 3 misprediction: 2
+N N not miss
+
+0x010 beq R0,R0,Loop
+100 WN SN SN SN WN SN SN SN entry: 0 misprediction: 2
+T T not miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN WN SN SN SN entry: 1 misprediction: 2
+N N not miss
+
+0x00C addi R3,R3,1
+010 WN SN SN SN WN SN SN SN entry: 2 misprediction: 2
+N N not miss
+
+0x010 beq R0,R0,Loop
+100 WN SN SN SN WN SN SN SN entry: 3 misprediction: 2
+T T not miss
+
+0x008 beq R4,R3,End
+001 WN SN SN SN WT SN SN SN entry: 0 misprediction: 3
+N T miss

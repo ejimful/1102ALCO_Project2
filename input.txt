@@ -1,0 +1,7 @@
+0x000		li R3,0;	
+0x004		li R4,25;
+	Loop:
+0x008		beq R4,R3,End;	
+0x00C		addi R3,R3,1;	
+0x010		beq R0,R0,Loop;
+	End:
